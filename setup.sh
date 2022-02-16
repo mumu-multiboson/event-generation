@@ -1,6 +1,7 @@
 if [[ `basename $PWD` != "event-generation" ]]; then echo "Execute from event-generation dir"; exit; fi
 
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:${PWD}/lib
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:${PWD}/lib:${PWD}/delphes
+export ROOT_INCLUDE_PATH=$ROOT_INCLUDE_PATH:${PWD}/delphes/external/
 export prodBase=$PWD
 
 if [[ $HOSTNAME == "login.snowmass21.io" ]]; then
