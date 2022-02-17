@@ -6,3 +6,5 @@ include/
 lib/
 share/
 dummy
+py.py
+*debug
