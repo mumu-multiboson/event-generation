@@ -4,14 +4,14 @@ if [[ `basename $PWD` != "event-generation" ]]; then echo "Execute from event-ge
 if [[ $# < 1 ]]; 
 then 
     echo "Usage: ./generateEvents.sh <mg script> [delphes card]"
-    echo "Example: ./generateEvents.sh $PWD/foo $PWD/delphes/cards/gen_card.tcl"
+    echo "Example: ./generateEvents.sh foo delphes_card_MuonColliderDet.tcl"
     exit
 else
-    mgScript=$1
+    mgScript=$PWD/$1
     if [[ $# -gt 1 ]]; then
-	delphesCard=$2
+	delphesCard=$PWD/$2
     else
-	delphesCard="cards/gen_card.tcl"
+	delphesCard=$PWD/"delphes_card_MuonColliderDet.tcl"
     fi
 fi
 

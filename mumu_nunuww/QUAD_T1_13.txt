@@ -24,27 +24,27 @@ generate mu+ mu- > w+ w- vm~ vm T0=0 M0=0 M1=0 M2=0 M3=0 M4=0 M5=0 M7=0 T1^2==2 
 output mumu_nunuww_QUAD_T1_13_6TeV
 launch mumu_nunuww_QUAD_T1_13_6TeV
 0
-set FS0 1.0e-20
-set FS1 1.0e-20
-set FS2 1.0e-20
-set FM0 1.0e-20
-set FM1 1.0e-20
-set FM2 1.0e-20
-set FM3 1.0e-20
-set FM4 1.0e-20
-set FM5 1.0e-20
-set FM6 1.0e-20
-set FM7 1.0e-20
-set FT0 1.0e-20
+set FS0 0
+set FS1 0
+set FS2 0
+set FM0 0
+set FM1 0
+set FM2 0
+set FM3 0
+set FM4 0
+set FM5 0
+set FM6 0
+set FM7 0
+set FT0 0
 set FT1 1.0e-13
-set FT2 1.0e-20
-set FT3 1.0e-20
-set FT4 1.0e-20
-set FT5 1.0e-20
-set FT6 1.0e-20
-set FT7 1.0e-20
-set FT8 1.0e-20
-set FT9 1.0e-20
+set FT2 0
+set FT3 0
+set FT4 0
+set FT5 0
+set FT6 0
+set FT7 0
+set FT8 0
+set FT9 0
 set param_card sminputs 1 1.325070e+02
 set nevents 10000
 set bwcutoff 15.0
