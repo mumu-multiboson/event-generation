@@ -1,0 +1,66 @@
+set group_subprocesses Auto
+set ignore_six_quark_processes False
+set max_t_for_channel 99
+set loop_optimized_output True
+set low_mem_multicore_nlo_generation False
+set default_unset_couplings 99
+set include_lepton_initiated_processes False
+set zerowidth_tchannel True
+set nlo_mixed_expansion True
+set loop_color_flows False
+set gauge unitary
+set complex_mass_scheme False
+set max_npoint_for_channel 0
+import model SM_Ltotal_Ind5v2020v2_UFO
+define p = g u c d s u~ c~ d~ s~
+define j = g u c d s u~ c~ d~ s~
+define l+ = e+ mu+
+define l- = e- mu-
+define vl = ve vm vt
+define vl~ = ve~ vm~ vt~
+define p = 21 2 4 1 3 -2 -4 -1 -3 5 -5 # pass to 5 flavors
+define j = p
+generate mu+ mu- > w+ w- vm~ vm T0=0 M0=0 M1=0 M2=0 M3=0 M4=0 M5=0 M6^2==2 M7=0 T1=0 T2=0 T5=0 T6=0 T7=0 T8=0 T9=0 S0=0 S1=0 S2=0
+output mumu_nunuww_QUAD_M6_12_6TeV
+launch mumu_nunuww_QUAD_M6_12_6TeV
+0
+set FS0 0
+set FS1 0
+set FS2 0
+set FM0 0
+set FM1 0
+set FM2 0
+set FM3 0
+set FM4 0
+set FM5 0
+set FM6 1.0e-12
+set FM7 0
+set FT0 0
+set FT1 0
+set FT2 0
+set FT3 0
+set FT4 0
+set FT5 0
+set FT6 0
+set FT7 0
+set FT8 0
+set FT9 0
+set param_card sminputs 1 1.325070e+02
+set nevents 10000
+set bwcutoff 15.0
+set ptb 20.0
+set ptl 0.1
+set etab 5.0
+set drbb 0.4
+set drbj 0.4
+set drll 0.1
+#set mmll 5.0
+#set mmnl 5.0
+#set ptllmin 5.0
+set etal 15.0
+set maxjetflavor 5
+set dynamical_scale_choice 3
+set ebeam1 3000
+set ebeam2 3000
+set iseed 2050
+0
