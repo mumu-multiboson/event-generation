@@ -62,5 +62,5 @@ set maxjetflavor 5
 set dynamical_scale_choice 3
 set ebeam1 3000
 set ebeam2 3000
-set iseed 2060
+set iseed 2203
 0
