@@ -46,7 +46,7 @@ set FT7 0.0
 set FT8 0.0
 set FT9 0.0
 set param_card sminputs 1 1.325070e+02
-set nevents 10000
+set nevents 100000
 set bwcutoff 15.0
 set ptb 20.0
 set ptl 0.1
