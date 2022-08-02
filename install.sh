@@ -12,29 +12,28 @@ if [[ $? -ne 0 ]]; then
 fi
 rm MG5_aMC_v3.1.1.tar.gz
 
-#Pythia
-wget https://pythia.org/download/pythia83/pythia8306.tgz
-tar -xzvf pythia8306.tgz
-rm pythia8306.tgz
-cd pythia8306
-./configure --prefix=$baseDir
-make -j
-make install
-if [[ $? -ne 0 ]]; then
-    echo "ERROR compiling pythia"
-    exit
-fi
-cd ..
-
-#Delphes
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:${baseDir}/lib    
-export PYTHIA8=$baseDir
 git clone https://github.com/delphes/delphes.git
 cd delphes
-make HAS_PYTHIA8=true -j -I${baseDir}/include/Pythia8
+make HAS_PYTHIA8=true -j -I/cvmfs/sft.cern.ch/lcg/views/LCG_101_ATLAS_7/x86_64-centos7-gcc11-opt/include/Pythia8
 if [[ $? -ne 0 ]]; then
     echo "ERROR compiling delphes"
     exit
 fi
+cd ..
 
-#echo "export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:${baseDir}/lib" >> ~/.bash_profile
+
+
+# #Whizard
+# wget http://whizard.hepforge.org/whizard-3.0.3.tar.gz
+# tar -xzf whizard-3.0.3.tar.gz
+# rm whizard-3.0.3.tar.gz
+# cd whizard-3.0.3
+# ./configure --prefix=$baseDir
+# /afs/cern.ch/user/a/aschuy/work/private/VBS_WGamma/muon_collider/event-generation
+# make -j
+# make install
+# if [[ $? -ne 0 ]]; then
+#     echo "ERROR compiling Whizard"
+#     exit
+# fi
+# cd ..
