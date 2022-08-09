@@ -1,0 +1,9 @@
+process wpwm_mumu = E2, e2 => (Wp, Wm, e2, E2)
+mH = 125 GeV
+wH = 0.00407 GeV
+beams = E2, e2 => isr  # include the isr
+sqrts = 30000 GeV
+cuts = all M < -10 GeV [incoming e2, e2] and all M < -10 GeV [incoming E2, E2]
+n_events = 100000
+sample_format = lhef
+simulate (wpwm_mumu)

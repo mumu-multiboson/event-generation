@@ -1,0 +1,8 @@
+process wpwmz = E2, e2 => (Wp, Wm, Z)
+mH = 125 GeV
+wH = 0.00407 GeV
+beams = E2, e2 => isr  # include the isr
+sqrts = 30000 GeV
+n_events = 1000000
+sample_format = lhef
+simulate (wpwmz)
