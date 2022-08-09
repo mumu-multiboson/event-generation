@@ -10,3 +10,6 @@ py.py
 *debug
 whizard*/
 *.sub
+*.err
+*.out
+*.log

@@ -1,9 +1,12 @@
+#!/bin/bash
 lhe=$1
 echo "input lhe = $lhe"
 delphes_dir=$2
 echo "delphes dir = $delphes_dir"
 delphes_card=$3
 echo "delphes card = $delphes_card"
+cd $delphes_dir/..
+source setup.sh
 cd $delphes_dir
 output=${lhe%%.lhe}.root  #set delphes output path/name
 echo "output file = $output"
