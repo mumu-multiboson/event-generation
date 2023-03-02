@@ -1,0 +1,53 @@
+#************************************************************
+#*                     MadGraph5_aMC@NLO                    *
+#*                                                          *
+#*                *                       *                 *
+#*                  *        * *        *                   *
+#*                    * * * * 5 * * * *                     *
+#*                  *        * *        *                   *
+#*                *                       *                 *
+#*                                                          *
+#*                                                          *
+#*         VERSION 2.9.5                 2021-08-22         *
+#*                                                          *
+#*    The MadGraph5_aMC@NLO Development Team - Find us at   *
+#*    https://server06.fynu.ucl.ac.be/projects/madgraph     *
+#*                                                          *
+#************************************************************
+#*                                                          *
+#*               Command File for MadGraph5_aMC@NLO         *
+#*                                                          *
+#*     run as ./bin/mg5_aMC  filename                       *
+#*                                                          *
+#************************************************************
+set group_subprocesses Auto
+set ignore_six_quark_processes False
+set max_t_for_channel 99
+set loop_optimized_output True
+set low_mem_multicore_nlo_generation False
+set default_unset_couplings 99
+set zerowidth_tchannel True
+set loop_color_flows False
+set gauge unitary
+set complex_mass_scheme False
+set max_npoint_for_channel 0
+define p = g u c d s u~ c~ d~ s~
+define l+ = e+ mu+
+define l- = e- mu-
+define p = g u c d s u~ c~ d~ s~
+define j = g u c d s u~ c~ d~ s~
+define l+ = e+ mu+ ta+
+define l- = e- mu- ta-
+define vl = ve vm vt
+define vl~ = ve~ vm~ vt~
+import model GM_UFO
+generate mu+ mu- > H5z vm vm~, (H5z > w+ w-, w+ > j j, w- > j j)
+output heavy_higgs_1000GeV -nojpeg
+launch heavy_higgs_1000GeV
+0
+set nevents 100000
+set ebeam1 3000
+set ebeam2 3000
+set iseed 2040
+/afs/cern.ch/user/a/aschuy/work/private/VBS_WGamma/muon_collider/event-generation/heavy_higgs/6tev/1000/param_card.dat
+0
