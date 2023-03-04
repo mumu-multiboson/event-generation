@@ -4,5 +4,4 @@ arguments = {lhe} {delphes_dir} {delphes_card}
 output = condor/output/$(ClusterId).$(ProcId).out
 error = condor/error/$(ClusterId).$(ProcId).err
 log = condor/condor/$(ClusterId).log
-+JobFlavour = "nextweek"
 queue

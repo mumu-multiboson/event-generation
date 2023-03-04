@@ -41,13 +41,14 @@ define l- = e- mu- ta-
 define vl = ve vm vt
 define vl~ = ve~ vm~ vt~
 import model GM_UFO
-generate mu+ mu- > H5z vm vm~, (H5z > w+ w-, w+ > j j, w- > j j)
-output heavy_higgs_500GeV_6TeV -nojpeg
-launch heavy_higgs_500GeV_6TeV
+generate mu+ mu- > H5z vm vm~ $$ w+ w- z, (H5z > w+ w-, w+ > j j, w- > j j)
+generate mu+ mu- > H5z vm vm~ $$ w+ w- z, (H5z > z z, z > j j)
+output heavy_higgs_$MASSGeV -nojpeg
+launch heavy_higgs_$MASSGeV
 0
 set nevents 100000
-set ebeam1 3000
-set ebeam2 3000
+set ebeam1 $CM_OVER_2_GEV
+set ebeam2 $CM_OVER_2_GEV
 set iseed 2040
-/afs/cern.ch/user/a/aschuy/work/private/VBS_WGamma/muon_collider/event-generation/heavy_higgs/500/param_card.dat
+$PARAM_CARD_PATH
 0

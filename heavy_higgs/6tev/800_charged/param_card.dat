@@ -35,12 +35,12 @@ BLOCK MASS #
       21 0.000000e+00 # g : 0.0
       22 0.000000e+00 # a : 0.0
       24 7.982436e+01 # w+ : cmath.sqrt(mz__exp__2/2. + cmath.sqrt(mz__exp__4/4. - (aew*cmath.pi*mz__exp__2)/(gf*sqrt__2)))
-      252 1.024813e+03 # h : cmath.sqrt(mat11sq + mat22sq - mh__exp__2)
-      253 1.019417e+03 # h3p : cmath.sqrt(v__exp__2*(lam5/2. + m1coeff/(4.*vchi)))
-      255 1.000008e+03 # h5pp : cmath.sqrt(12*m2coeff*vchi + 8*lam3*vchi__exp__2 + (3*lam5*vphi__exp__2)/2. + (m1coeff*vphi__exp__2)/(4.*vchi))
-      254 1.019417e+03 # h3z : mh3
-      256 1.000008e+03 # h5p : mh5
-      257 1.000008e+03 # h5z : mh5
+      252 8.296804e+02 # h : cmath.sqrt(mat11sq + mat22sq - mh__exp__2)
+      253 8.211926e+02 # h3p : cmath.sqrt(v__exp__2*(lam5/2. + m1coeff/(4.*vchi)))
+      255 8.000037e+02 # h5pp : cmath.sqrt(12*m2coeff*vchi + 8*lam3*vchi__exp__2 + (3*lam5*vphi__exp__2)/2. + (m1coeff*vphi__exp__2)/(4.*vchi))
+      254 8.211926e+02 # h3z : mh3
+      256 8.000037e+02 # h5p : mh5
+      257 8.000037e+02 # h5z : mh5
 ###################################
 ## INFORMATION FOR NEUTRALFORMFACTORS
 ###################################
@@ -60,12 +60,12 @@ BLOCK NEUTRALFORMFACTORS #
 ## INFORMATION FOR POTENTIALPARAM
 ###################################
 BLOCK POTENTIALPARAM # 
-      1 4.000000e-01 # lam2
+      1 3.200000e-01 # lam2
       2 -1.000000e-01 # lam3
       3 2.000000e-01 # lam4
-      4 -7.065000e-01 # lam5
-      5 1.522977e+03 # m1coeff
-      6 2.538294e+02 # m2coeff
+      4 -8.666000e-01 # lam5
+      5 2.012087e+03 # m1coeff
+      6 3.353478e+02 # m2coeff
 ###################################
 ## INFORMATION FOR REXCHARGEDFORMFACTORS
 ###################################
@@ -85,7 +85,7 @@ BLOCK SMINPUTS #
 ## INFORMATION FOR VEV
 ###################################
 BLOCK VEV # 
-      1 2.581989e-01 # tanth
+      1 5.773500e-01 # tanth
 ###################################
 ## INFORMATION FOR YUKAWA
 ###################################
@@ -109,8 +109,8 @@ DECAY 25 5.753088e-03 # wh
 DECAY 252 1.000000e+00 # wh__2
 DECAY 253 1.000000e+00 # wh3p
 DECAY 254 1.000000e+00 # wh3z
-DECAY 255 1.939370e+01 # wh5pp
-DECAY 256 1.000000e+00 # wh5p
+DECAY 255 3.885000e+01 # wh5pp
+DECAY 256 3.885000e+01 # wh5p
 DECAY 257 1.000000e+00 # wh5z
 DECAY 1 0.000000e+00 # d : 0.0
 DECAY 2 0.000000e+00 # u : 0.0
