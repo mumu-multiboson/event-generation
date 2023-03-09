@@ -1,6 +1,8 @@
 from pathlib import Path 
 import argparse
 
+from shutil import rmtree
+
 parser = argparse.ArgumentParser()
 parser.add_argument('mg_scripts', nargs='+')
 parser.add_argument('--mg5', default='../MG5_aMC_v3_1_1/bin/mg5_aMC')
@@ -20,6 +22,24 @@ make_if_needed(condor_dir / 'output')
 make_if_needed(condor_dir / 'condor')
 make_if_needed(condor_dir / 'error')
 make_if_needed(condor_dir / 'submit')
+
+# delete output directories if they exist
+cm_energies = set()
+for p in args.mg_scripts:
+    p = Path(p).resolve()
+    cm_energy = p.parent.parent.stem
+    cm_energies.add(cm_energy)
+
+for cm_energy in cm_energies:
+    output = output_dir / cm_energy
+    if output.exists():
+        print(f'Output directory {output} already exists, deleting...')
+        for f in output.iterdir():
+            print(f'    {f}')
+            if f.is_dir():
+                rmtree(f)
+            else:
+                f.unlink()
 
 
 for p in args.mg_scripts:

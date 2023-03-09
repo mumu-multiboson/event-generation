@@ -14,6 +14,7 @@ def main():
 
     xsec_dict = {}    
     # loop over directories in madgraph_dir
+    failed_dirs = []
     for cm_energy in madgraph_dir.iterdir():
         if not cm_energy.is_dir():
             continue
@@ -23,10 +24,16 @@ def main():
             if 'charged' in mass.name:
                 continue
             # get the cross section
-            text = (mass / 'Events/run_01/run_01_tag_1_banner.txt').read_text()
-            xsec = float(text.split('Integrated weight (pb)')[1].split(':')[1].split('\n')[0])
-            xsec_dict[f'{mass.name}_{cm_energy.name}'] = xsec * 1000
+            try:
+                text = (mass / 'Events/run_01/run_01_tag_1_banner.txt').read_text()
+                xsec = float(text.split('Integrated weight (pb)')[1].split(':')[1].split('\n')[0])
+                xsec_dict[f'{mass.name}_{cm_energy.name}'] = xsec * 1000
+            except Exception as e:
+                print(f'Failed to get cross section for {mass.name}_{cm_energy.name}')
+                failed_dirs.append(f'{mass.name}_{cm_energy.name}')
+                print(e)
 
+    print('Failed dirs:', failed_dirs)
     output_path = madgraph_dir / 'cross_section.yaml'
     print(f'Writing cross_section.yaml to {output_path}')
     # sort xsec_dict by cm_energy, then by mass

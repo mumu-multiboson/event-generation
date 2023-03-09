@@ -42,7 +42,7 @@ define vl = ve vm vt
 define vl~ = ve~ vm~ vt~
 import model GM_UFO
 generate mu+ mu- > H5z vm vm~ $$ w+ w- z, (H5z > w+ w-, w+ > j j, w- > j j)
-generate mu+ mu- > H5z vm vm~ $$ w+ w- z, (H5z > z z, z > j j)
+add process mu+ mu- > H5z vm vm~ $$ w+ w- z, (H5z > z z, z > j j)
 output heavy_higgs_500GeV -nojpeg
 launch heavy_higgs_500GeV
 0
