@@ -14,6 +14,7 @@ rm MG5_aMC_v3.1.1.tar.gz
 
 git clone https://github.com/delphes/delphes.git
 cd delphes
+git checkout tags/3.5.0
 make HAS_PYTHIA8=true -j -I/cvmfs/sft.cern.ch/lcg/views/LCG_101_ATLAS_7/x86_64-centos7-gcc11-opt/include/Pythia8
 if [[ $? -ne 0 ]]; then
     echo "ERROR compiling delphes"

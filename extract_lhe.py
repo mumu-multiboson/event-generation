@@ -37,7 +37,11 @@ def main():
         if len(lhe_files) > 1:
             print(f"Error: {str(run_dir)} contains multiple LHE files. Skipping...")
             continue
-        lhe_file = lhe_files[0]
+        try:
+            lhe_file = lhe_files[0]
+        except IndexError:
+            print(f"Error: {str(run_dir)} does not contain an LHE file. Skipping...")
+            continue
         if args.append_energy:
             output_name = location / f'{d.stem}_{energy}.lhe'
         else:
